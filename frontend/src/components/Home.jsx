@@ -1,8 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../features/cartSlice";
 
 const Home = () => {
   const { items: products, status } = useSelector((state) => state.products);
   const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <div className="home-container">
@@ -19,7 +24,9 @@ const Home = () => {
                     <span>{product.desc}</span>
                     <span className="price">${product.price}</span>
                   </div>
-                  <button>Add to Cart</button>
+                  <button onClick={() => handleAddToCart(product)}>
+                    Add to Cart
+                  </button>
                 </div>
               ))}
           </div>
