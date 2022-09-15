@@ -15,7 +15,7 @@ const products = [
   },
   {
     id: 3,
-    name: "iPhone 10 Pro",
+    name: "Galaxy S",
     desc: "6-inch display",
     price: 599,
     image: "https://res.cloudinary.com/devdnzvf4/image/upload/v1663007312/onlineShop/galaxyS_xa45xf.png",
